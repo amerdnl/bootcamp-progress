@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gridbox layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .app {
+        width: 1100px;
+        margin: 20px auto;
+        display: grid;
+
+        grid-template-columns: 240px 20px 820px;
+        grid-template-rows: 80px 60px 500px 60px;
+        gap: 16px;
+
+        grid-template-areas:
+          "header header header"
+          "nav nav nav"
+          "sidebar divider main"
+          "footer footer footer";
+
+        justify-content: center;
+        align-items: stretch;
+      }
+
+      header,
+      nav,
+      aside,
+      main,
+      footer,
+      .divider {
+        border: 2px solid #000;
+        padding: 16px;
+      }
+
+      header {
+        grid-area: header;
+      }
+      nav {
+        grid-area: nav;
+      }
+      aside {
+        grid-area: sidebar;
+      }
+
+      main {
+        grid-area: main;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+
+      .divider {
+        grid-area: divider;
+        padding: 0;
+      }
+
+      .profile {
+        width: 180px;
+        border: 1px solid #000;
+        padding: 10px;
+        justify-self: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header>header</header>
+      <nav>navigation</nav>
+      <aside>
+        <div class="profile">
+          profile section<br />
+          Mr. John<br />
+          Admin
+        </div>
+        <p style="margin-top: 15px">
+          side menu<br />
+          - user management<br />
+          - logs<br />
+          -anything
+        </p>
+      </aside>
+
+      <div class="divider"></div>
+
+      <main>
+        <h2>main content</h2>
+        <p style="margin-top: 10px">
+          using a gridbox based on fixed pixel values<br />
+          i will write this as a practical 3-column layout example
+        </p>
+      </main>
+
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

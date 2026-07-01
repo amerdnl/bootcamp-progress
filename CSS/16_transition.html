@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+
+      .box {
+        width: 200px;
+        height: 120px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+      }
+
+      .single {
+        background-color: deepskyblue;
+        transition: background-color 1s ease;
+      }
+
+      .single:hover {
+        background-color: deeppink;
+      }
+
+      .multiple {
+        background-color: gold;
+        transition:
+          background-color 0.5s ease,
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+
+      .multiple:hover {
+        background-color: darkorange;
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>single transition</h2>
+    <div class="box single">try hovering here</div>
+
+    <h2>multiple transition</h2>
+    <div class="box multiple">try hovering here</div>
+  </body>
+</html>

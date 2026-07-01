@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /* 1. Universal Selector */
+      * {
+        margin: 0;
+      }
+
+      /* 2. Tag Selector */
+      p {
+        color: deeppink;
+      }
+
+      /* 3. Class Selector */
+      .title {
+        font-size: 50px;
+      }
+
+      /* 4. ID Selector */
+      #header {
+        background-color: aquamarine;
+      }
+
+      /* 5. Group Selector */
+      h1,
+      h2 {
+        color: blueviolet;
+      }
+
+      /* 6. Descendant Selector */
+      div p {
+        font-style: italic;
+      }
+
+      /* 7. Child Selector */
+      ul > li {
+        color: orange;
+      }
+
+      /* 8. Adjacent Sibling Selector */
+      h2 + p {
+        background-color: yellow;
+      }
+
+      /* 9. General Sibling Selector */
+      h2 ~ p {
+        border-left: 10px solid grey;
+      }
+
+      /*  10. Attribute Selector  */
+      input[type="text"] {
+        border: 3px solid red;
+      }
+
+      /* 11. Pseudo Class Selector */
+      a:hover {
+        color: pink;
+      }
+
+      /* 12. Pseudo-element Selector */
+      p::first-letter {
+        font-size: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- examples of CSS Selectors -->
+    <div id="header">
+      <h1 class="title">CSS Selector</h1>
+    </div>
+
+    <h2>Section title</h2>
+    <p>the first paragraph of the p tag</p>
+    <p>the second paragraph of the p tag</p>
+
+    <div>
+      <p>this is a paragraph inside the div</p>
+    </div>
+
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+    </ul>
+
+    <p><a href="#">hover over the link</a></p>
+
+    <input type="text" placeholder="enter your password" />
+  </body>
+</html>

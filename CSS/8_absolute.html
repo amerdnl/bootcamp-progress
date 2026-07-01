@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>absolute</title>
+    <style>
+      .parent {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 50px;
+      }
+      .child {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      parent area
+      <div class="child">absolute box</div>
+    </div>
+  </body>
+</html>

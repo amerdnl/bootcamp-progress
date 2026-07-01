@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS variable</title>
+    <style>
+      :root {
+        --main-color: #3498db;
+        --sub-color: #2ecc71;
+        --base-padding: 20px;
+        --title-size: 45px;
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+
+      .box {
+        border: 2px solid var(--main-color);
+        padding: var(--base-padding);
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: var(--title-size);
+        color: var(--main-color);
+      }
+
+      p {
+        color: var(--sub-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>CSS variable example.</h1>
+      <p>this example manages colors and margin using CSS</p>
+    </div>
+  </body>
+</html>

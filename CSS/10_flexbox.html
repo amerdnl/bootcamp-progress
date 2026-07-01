@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex box</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      header,
+      footer {
+        border: 2px solid #000;
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+
+      .columns {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
+      }
+
+      nav,
+      main,
+      aside {
+        border: 2px solid #000;
+        padding: 20px;
+        min-height: 200px;
+      }
+
+      nav {
+        flex: 1;
+      }
+
+      main {
+        flex: 2;
+      }
+
+      aside {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>header area</header>
+      <div class="columns">
+        <nav>nav(navigation menu)</nav>
+        <main>main(below to refer the main contain in the center)</main>
+        <aside>aside(the right side)</aside>
+      </div>
+      <footer>footer area</footer>
+    </div>
+  </body>
+</html>

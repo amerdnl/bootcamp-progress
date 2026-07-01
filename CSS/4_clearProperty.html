@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Property</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 900px;
+        margin: 20px auto;
+        border: 2px solid #000;
+      }
+
+      header,
+      footer {
+        padding: 20px;
+        border: 2px solid #000;
+        margin: 10px;
+      }
+
+      main {
+        margin: 10px;
+        border: 2px solid #000;
+        padding: 10px;
+      }
+
+      .left {
+        float: left;
+        width: 63%;
+        border: 2px solid #000;
+        padding: 20px;
+        margin-right: 10px;
+      }
+
+      .right {
+        float: left;
+        width: 34%;
+        border: 2px solid #000;
+        padding: 20px;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>header area</header>
+
+      <main>
+        <section class="left">left class section</section>
+
+        <aside class="right">this is right side area</aside>
+
+        <div class="clear"></div>
+      </main>
+
+      <footer>footer area</footer>
+    </div>
+  </body>
+</html>

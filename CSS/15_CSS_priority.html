@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS priority</title>
+    <style>
+      p {
+        color: blue;
+      }
+
+      .text {
+        color: green;
+      }
+
+      #target {
+        color: red;
+      }
+
+      .text {
+        color: purple;
+      }
+
+      .force {
+        color: orange !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="target" class="text">
+      which of the following styles will be applied to this sentence p (blue) /
+      .text(green-purple) / #target(red) ?
+    </p>
+
+    <p id="target" class="text force">
+      this sentence prioritizes Store Orange Important over Shop #target(red)
+      .force(orange !important)
+    </p>
+
+    <p id="target" class="text force" style="color: black">
+      there is also inline(black) but, !important orange takes precedence
+    </p>
+
+    <p id="target" class="text" style="color: black">
+      since there is no !important rule in the second instance, the
+      inline(black) takes precedence
+    </p>
+  </body>
+</html>

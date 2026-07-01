@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+
+      .container {
+        display: flex;
+        gap: 30px;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: deepskyblue;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+      }
+
+      .translate:hover {
+        transform: translateY(-20px);
+      }
+
+      .scale:hover {
+        transform: scale(1.3);
+      }
+
+      .rotate:hover {
+        transform: rotate(20deg);
+      }
+
+      .skew:hover {
+        transform: skew(10deg, 5deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>transform function</h2>
+    <div class="container">
+      <div class="box translate">translate</div>
+      <div class="box scale">scale</div>
+      <div class="box rotate">rotate</div>
+      <div class="box skew">skew</div>
+    </div>
+  </body>
+</html>
