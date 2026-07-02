@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reference type</title>
+  </head>
+  <body>
+    <h2>Reference Type</h2>
+    <script>
+      const user = { name: "ameer", age: 23 };
+      const scores = [80, 90, 100];
+
+      function greet() {
+        console.log("Hello There!!");
+      }
+
+      console.log(user);
+      console.log(scores);
+
+      const copyUser = user;
+      copyUser.name = "Malik";
+
+      console.log(user);
+      console.log(copyUser);
+    </script>
+  </body>
+</html>
