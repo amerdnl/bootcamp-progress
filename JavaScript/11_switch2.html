@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>printing last date of each month</title>
+  </head>
+  <body>
+    <h2>printing last date of each month</h2>
+    <script>
+      const month = 4;
+      switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          console.log(`${month} the last day of this month is 31`);
+          break;
+        case 2:
+          console.log("the last day of this month is 28 or 29");
+          break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          console.log(`${month} last day of this month is 30`);
+          break;
+      }
+    </script>
+  </body>
+</html>

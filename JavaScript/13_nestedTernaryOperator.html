@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nested ternary operator</title>
+  </head>
+  <body>
+    <h2>nested ternary operator example</h2>
+    <script>
+      const score = 100;
+      const grade =
+        score >= 90
+          ? "A"
+          : score >= 80
+            ? "B"
+            : score >= 70
+              ? "C"
+              : score >= 60
+                ? "D"
+                : "F";
+
+      console.log(`your grade is ${grade} , your score ${score}`);
+    </script>
+  </body>
+</html>
