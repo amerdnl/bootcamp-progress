@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>comparison of array loops</title>
+  </head>
+  <body>
+    <h2>comparison of array loops</h2>
+    <script>
+      let names = ["ameer", "malik", "paan", "azmi"];
+
+      for (let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+      }
+
+      for (let name of names) {
+        console.log(name);
+      }
+
+      names.forEach(function (name) {
+        console.log(name);
+      });
+    </script>
+  </body>
+</html>

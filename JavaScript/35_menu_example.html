@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu board example</title>
+  </head>
+  <body>
+    <h2>menu board example</h2>
+    <script>
+      let menuBoard = [
+        ["bulgogi burger", "french fries", "cola"],
+        ["cheese burger", "hotdog", "soda"],
+        ["shrimp burger", "chicken nuggets", "green tea"],
+      ];
+
+      for (let row = 0; row < menuBoard.length; row++) {
+        let line = "";
+        for (let col = 0; col < menuBoard[row].length; col++) {
+          line += menuBoard[row][col] + "\t";
+        }
+        console.log(line);
+      }
+    </script>
+  </body>
+</html>
