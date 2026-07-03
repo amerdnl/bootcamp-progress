@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var function scope</title>
+  </head>
+  <body>
+    <h2>var function scope</h2>
+    <script>
+      function test() {
+        if (true) {
+          let x = 10;
+        }
+        console.log(x);
+      }
+
+      test();
+    </script>
+  </body>
+</html>

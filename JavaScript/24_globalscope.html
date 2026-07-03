@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>global scope</title>
+  </head>
+  <body>
+    <h2>global scope</h2>
+    <script>
+      var a = 1;
+      let b = 2;
+      const c = 3;
+
+      function func1() {
+        console.log(window.a, window.b, c);
+      }
+
+      func1();
+    </script>
+  </body>
+</html>
