@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>default parameter</title>
+  </head>
+  <body>
+    <h2>default parameter</h2>
+    <script>
+      function greet(name = "guest.") {
+        console.log(`Hello ${name}`);
+      }
+
+      greet("Ameer");
+      greet();
+    </script>
+  </body>
+</html>

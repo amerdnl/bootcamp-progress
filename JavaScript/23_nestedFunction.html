@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nested function</title>
+  </head>
+  <body>
+    <h2>nested function</h2>
+    <script>
+      function greet(name) {
+        function message() {
+          return `Hello Mr. ${name}`;
+        }
+        console.log(message());
+      }
+
+      greet("Ameer");
+    </script>
+  </body>
+</html>
