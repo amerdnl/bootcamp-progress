@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array methods</title>
+  </head>
+  <body>
+    <h2>array methods</h2>
+    <script>
+      const user = [1, "apple", "Ameer", 20, "Shah Alam"];
+      console.log(user);
+
+      console.log(user[0]);
+      console.log(user[1]);
+      console.log(user[2]);
+      console.log(user[3]);
+      console.log(user[4]);
+      console.log(user[5]);
+
+      user[4] = "Klang";
+      console.log(user[4]);
+      console.log(user.length);
+
+      user[6] = "male";
+      console.log(user);
+      console.log(user.length);
+
+      for (let i = 0; i < user.length; i++) {
+        console.log(user[i]);
+      }
+
+      user.push("MSU");
+      console.log(user);
+
+      let temp = user.pop();
+      console.log(user);
+      console.log(temp);
+
+      temp = user.shift();
+      console.log(user);
+      console.log(temp);
+
+      const profile = ["Malik", "Uitm"];
+      let result = user.concat(profile);
+      console.log(result);
+
+      result = user.join("😛");
+      console.log(result);
+      console.log(typeof result);
+
+      const arr = ["apple", "banana", "Apple", "orange", "melon"];
+      arr.sort();
+      console.log(arr);
+
+      arr.reverse();
+      console.log(arr);
+    </script>
+  </body>
+</html>
