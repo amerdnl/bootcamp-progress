@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>super</title>
+  </head>
+  <body>
+    <h2>super</h2>
+    <script>
+      class Animal {
+        constructor(name) {
+          this.name = name;
+        }
+      }
+
+      class Dog extends Animal {
+        constructor(name, color) {
+          super(name);
+          this.color = color;
+        }
+
+        showInfo() {
+          console.log(`${this.name} is a ${this.color} color`);
+        }
+      }
+
+      const dog = new Dog("Jerry", "White");
+      dog.showInfo();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>private</title>
+  </head>
+  <body>
+    <h2>private</h2>
+    <script>
+      class User {
+        #password = "";
+
+        constructor(userid, password) {
+          this.userid = userid;
+          this.#password = password;
+        }
+
+        checkPassword(input) {
+          return this.#password === input;
+        }
+      }
+
+      const user = new User("ameer", "1111");
+      console.log(user.userid);
+      console.log(user.checkPassword("1111"));
+      console.log(user.checkPassword("2222"));
+
+      //   console.log(user.#password);
+    </script>
+  </body>
+</html>

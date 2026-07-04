@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this</title>
+  </head>
+  <body>
+    <h2>this</h2>
+    <script>
+      class Car {
+        constructor(name) {
+          this.name = name;
+        }
+        start() {
+          console.log(`${this.name} engine started`);
+        }
+      }
+
+      const myCar = new Car("Supra");
+      myCar.start();
+      const yourCar = new Car("Audi");
+      yourCar.start();
+    </script>
+  </body>
+</html>

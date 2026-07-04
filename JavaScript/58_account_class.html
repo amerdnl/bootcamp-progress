@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>account class</title>
+  </head>
+  <body>
+    <h2>account class</h2>
+    <script>
+      class Account {
+        static accoountCount = 0;
+        #balance = 0;
+
+        constructor(owner) {
+          this.owner = owner;
+          Account.accoountCount++;
+        }
+
+        get balance() {
+          return this.#balance;
+        }
+
+        set balance(value) {
+          console.log("cannot set the previous balance");
+        }
+
+        deposit(amount) {
+          if (amount > 0) {
+            this.#balance += amount;
+            console.log(`${this.owner} has deposit ${amount} ringgit`);
+          }
+        }
+
+        withdraw(amount) {
+          if (amount <= this.#balance) {
+            this.#balance -= amount;
+            console.log(`${this.owner} has withdraw ${amount} ringgit`);
+          } else {
+            console.log("insufficient balance.");
+          }
+        }
+
+        static getAccountCount() {
+          return `total account: ${Account.accoountCount}`;
+        }
+      }
+
+      const a1 = new Account("ameer");
+      a1.deposit(1000);
+      console.log(a1.balance);
+
+      a1.balance = 5000;
+      console.log(a1.balance);
+
+      a1.withdraw(300);
+      console.log(a1.balance);
+
+      const a2 = new Account("malik");
+      a2.deposit(2000);
+
+      console.log(Account.getAccountCount());
+    </script>
+  </body>
+</html>

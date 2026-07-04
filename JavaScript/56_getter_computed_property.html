@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getter computed property</title>
+  </head>
+  <body>
+    <h2>getter computed property</h2>
+    <script>
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+
+        get area() {
+          return this.width * this.height;
+        }
+      }
+
+      const rect = new Rectangle(5, 4);
+      console.log(rect.area);
+    </script>
+  </body>
+</html>

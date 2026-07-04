@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class field</title>
+  </head>
+  <body>
+    <h2>class field</h2>
+    <script>
+      class Product {
+        name = "no product name";
+        price = 0;
+
+        showInfo() {
+          console.log(`${this.name} and the price is ${this.price} ringgit `);
+        }
+      }
+
+      const p = new Product();
+      p.showInfo();
+    </script>
+  </body>
+</html>

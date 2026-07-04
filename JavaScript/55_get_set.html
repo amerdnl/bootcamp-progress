@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get / set</title>
+  </head>
+  <body>
+    <h2>get / set</h2>
+    <script>
+      class User {
+        constructor(name) {
+          this._name = name;
+        }
+
+        get name() {
+          return this._name;
+        }
+
+        set name(newName) {
+          if (newName.length < 2) {
+            console.log("the name must be at least 2 characters long");
+          } else {
+            this._name = newName;
+          }
+        }
+      }
+
+      const user = new User("ameer");
+      console.log(user.name);
+      user.name = "m";
+      user.name = "malik";
+      console.log(user.name);
+    </script>
+  </body>
+</html>
