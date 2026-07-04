@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor function</title>
+  </head>
+  <body>
+    <h2>constructor function</h2>
+    <script>
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.greet = function () {
+          console.log("hi my name is " + this.name + " good to see you");
+        };
+      }
+
+      const p1 = new Person("ameer", 23);
+      p1.greet();
+      const p2 = new Person("malik", 25);
+      p2.greet();
+    </script>
+  </body>
+</html>

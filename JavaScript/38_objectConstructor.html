@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object constructor</title>
+  </head>
+  <body>
+    <h2>object constructor</h2>
+    <script>
+      const person = Object();
+      person.name = "ameer";
+      person.age = 23;
+      person.greet = function () {
+        console.log("my name is " + this.name + ", good to see you");
+      };
+
+      person.greet();
+    </script>
+  </body>
+</html>

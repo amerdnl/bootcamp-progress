@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rest parameter</title>
+  </head>
+  <body>
+    <h2>rest parameter</h2>
+    <script>
+      function sum(...nums) {
+        let total = 0;
+        for (let n of nums) {
+          total += n;
+        }
+        return total;
+      }
+
+      console.log(sum(1, 2, 3));
+      console.log(sum(10, 20, 30, 40, 50, 60));
+    </script>
+  </body>
+</html>

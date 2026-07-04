@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shallow copy</title>
+  </head>
+  <body>
+    <h2>shallow copy</h2>
+    <script>
+      const obj1 = {
+        name: "ameer",
+        address: { city: "shah alam" },
+      };
+
+      const obj2 = { ...obj1 };
+      obj2.address.city = "klang";
+
+      console.log(obj1.address.city);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object destructing</title>
+  </head>
+  <body>
+    <h2>object destructing</h2>
+    <script>
+      const user = {
+        name: "ameer",
+        age: 23,
+        city: "shah alam",
+      };
+
+      const { name, ...rest } = user;
+      console.log(name);
+      console.log(rest);
+    </script>
+  </body>
+</html>

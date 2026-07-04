@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nested object destructuring</title>
+  </head>
+  <body>
+    <h2>nested object destructuring</h2>
+    <script>
+      const component = {
+        name: "Button",
+        styles: {
+          size: 20,
+          color: "deepskyblue",
+        },
+      };
+
+      function changeColor({ styles: { color } }) {
+        console.log(color);
+      }
+
+      changeColor(component);
+    </script>
+  </body>
+</html>

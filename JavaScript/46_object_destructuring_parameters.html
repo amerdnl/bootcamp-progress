@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object destructing parameters</title>
+  </head>
+  <body>
+    <h2>object destructing parameters</h2>
+    <script>
+      function display({ name, age, address, job }) {
+        console.log(name, age, address, job);
+      }
+
+      const apple = {
+        name: "ameer",
+        age: 23,
+        address: {
+          state: "selangor",
+          city: "shah alam",
+          apartment: "dian residence",
+        },
+      };
+
+      console.log(apple);
+
+      const new_apple = { ...apple, job: "programmer" };
+      display(new_apple);
+    </script>
+  </body>
+</html>

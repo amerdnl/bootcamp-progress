@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object method</title>
+  </head>
+  <body>
+    <h2>object method</h2>
+    <script>
+      const person = {
+        name: "ameer",
+        age: 23,
+        greet: function () {
+          console.log("hello i am " + this.name);
+        },
+      };
+
+      console.log(person.name);
+      person.greet();
+      console.log(person.greet);
+    </script>
+  </body>
+</html>
