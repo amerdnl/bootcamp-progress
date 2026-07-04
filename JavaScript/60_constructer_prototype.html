@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor prototype</title>
+  </head>
+  <body>
+    <h2>constructor prototype</h2>
+    <script>
+      function Dog(color, name, age) {
+        this.color = color;
+        this.name = name;
+        this.age = age;
+      }
+
+      const rucy = new Dog("White", "Rucy", 15);
+      console.log(rucy);
+      console.log(`dog name: ${rucy.name}`);
+      console.log(`dog color: ${rucy.color}`);
+      console.log(`dog age: ${rucy.age}`);
+
+      rucy.family = "ppomi";
+      rucy.getFamily = function () {
+        return this.family;
+      };
+      console.log(`dog family: ${rucy.family}`);
+      console.log(`getFamily: ${rucy.getFamily()}`);
+
+      const ppomi = new Dog("Black", "Ppomi", 6);
+      console.log(`dog name: ${ppomi.name}`);
+      console.log(`dog color: ${ppomi.color}`);
+      console.log(`dog age: ${ppomi.age}`);
+      console.log(`dog family: ${ppomi.family}`);
+      //   console.log(`getFamily: ${ppomi.getFamily()}`);
+
+      Dog.prototype.owner = "Malik";
+      Dog.prototype.run = function () {
+        return this.name + " is running!";
+      };
+
+      console.log(`owner of rucy: ${rucy.owner}`);
+      console.log(`owner of ppomi: ${ppomi.owner}`);
+      console.log(`rucy run: ${rucy.run()}`);
+      console.log(`ppomi run: ${ppomi.run()}`);
+    </script>
+  </body>
+</html>

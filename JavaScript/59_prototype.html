@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype</title>
+  </head>
+  <body>
+    <h2>prototype</h2>
+    <script>
+      function Person(name) {
+        this.name = name;
+      }
+
+      Person.prototype.sayHello = function () {
+        console.log(`Hello! I am ${this.name}. `);
+      };
+
+      const p1 = new Person("Ameer");
+      p1.sayHello();
+      const p2 = new Person("Malik");
+      p2.sayHello();
+    </script>
+  </body>
+</html>
