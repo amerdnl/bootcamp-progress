@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event object</title>
+    <style>
+      #clickArea {
+        width: 300px;
+        height: 150px;
+        background-color: deepskyblue;
+        border: 1px solid #aaa;
+        line-height: 150px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Check the event</h2>
+    <div id="clickArea">Click Here</div>
+    <input type="text" id="inputBox" placeholder="Press the Keyboard" />
+    <script>
+      document
+        .getElementById("clickArea")
+        .addEventListener("click", function (event) {
+          alert(
+            `client: X=${event.clientX}, Y=${event.clientY}\n` +
+              `event type: ${event.type}\n` +
+              `event target: ${event.target.id}`,
+          );
+        });
+
+      document
+        .getElementById("inputBox")
+        .addEventListener("keydown", function (event) {
+          console.log("key: ", event.key);
+          console.log("code: ", event.code);
+          console.log("target: ", event.terget);
+        });
+
+      document
+        .getElementById("inputBox")
+        .addEventListener("keypress", function (event) {
+          if (event.key == "Enter") {
+            event.preventDefault();
+            alert("Enter key pressed");
+          }
+        });
+    </script>
+  </body>
+</html>

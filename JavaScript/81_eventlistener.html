@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event listener</title>
+  </head>
+  <body>
+    <h2>event listener</h2>
+    <button id="eventBtn">Event Listener</button>
+    <script>
+      const eventBtn = document.getElementById("eventBtn");
+      eventBtn.addEventListener("click", function () {
+        alert("Event Listener was added");
+      });
+
+      eventBtn.addEventListener("mouseenter", function () {
+        eventBtn.style.backgroundColor = "deeppink";
+      });
+    </script>
+  </body>
+</html>
