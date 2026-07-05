@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM insertBefore</title>
+  </head>
+  <body>
+    <ul id="fruits">
+      <li>banana</li>
+    </ul>
+
+    <script>
+      const ul = document.getElementById("fruits");
+      const newItem = document.createElement("li");
+      newItem.innerText = "orange";
+
+      const existingItem = ul.firstElementChild;
+      ul.insertBefore(newItem, existingItem);
+    </script>
+  </body>
+</html>

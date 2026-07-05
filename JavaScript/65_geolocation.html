@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>geolocation</title>
+  </head>
+  <body>
+    <h2>geolocation</h2>
+    <button onclick="getLocation()">Current Location</button>
+    <p id="locationInfo">Location information will be shown here</p>
+
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          document.getElementById("locationInfo").innerText =
+            "this browser does not support location information";
+        }
+      }
+
+      function showPosition(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        document.getElementById("locationInfo").innerText =
+          `latitude: ${latitude}, longitude: ${longitude}`;
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("information provision has been refused.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Cannot use location information.");
+            break;
+          case error.TIMEOUT:
+            alert("It took too long to retrive the location information.");
+            break;
+          default:
+            alert("an error occured that cannot determine the alert location.");
+        }
+      }
+    </script>
+  </body>
+</html>

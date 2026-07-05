@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change the attribute</title>
+  </head>
+  <body>
+    <img src="./images/R.jpeg" alt="ptv image" id="image" />
+    <button onclick="changeImage()">Change the Image</button>
+
+    <script>
+      function changeImage() {
+        document
+          .getElementById("image")
+          .setAttribute("src", "./images/ptv.jpg");
+      }
+    </script>
+  </body>
+</html>

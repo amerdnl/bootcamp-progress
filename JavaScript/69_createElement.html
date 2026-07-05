@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createElement</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>fytfjytft</li>
+    </ul>
+    <button onclick="addItem()">Add item</button>
+
+    <script>
+      function addItem() {
+        // <li><li>
+        const newItem = document.createElement("li");
+        // <li>New item<li>
+        newItem.innerText = "New Item";
+        document.getElementById("list").appendChild(newItem);
+      }
+    </script>
+  </body>
+</html>

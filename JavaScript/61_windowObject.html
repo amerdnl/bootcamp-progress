@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window object</title>
+  </head>
+  <body>
+    <h2>window object</h2>
+    <script>
+      function showWindowInfo() {
+        console.log("browser name: ", window.navigator.appName);
+        console.log("browser engine: ", window.navigator.product);
+        console.log("user agent information: ", window.navigator.userAgent);
+
+        console.log("current page URL: ", window.location.href);
+        console.log("window width: ", window.innerWidth);
+        console.log("window height: ", window.innerHeight);
+
+        window.setTimeout(function () {
+          window.alert("3 seconds have passed!!");
+        }, 3000);
+      }
+    </script>
+    <button onclick="showWindowInfo()">view browser information</button>
+  </body>
+</html>

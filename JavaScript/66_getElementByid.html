@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElementById</title>
+  </head>
+  <body>
+    <h2>getElementById</h2>
+    <p id="greeting">Hello!!</p>
+    <button onclick="changeText()">change text</button>
+
+    <script>
+      function changeText() {
+        document.getElementById("greeting").innerText = "HI~~";
+      }
+    </script>
+  </body>
+</html>

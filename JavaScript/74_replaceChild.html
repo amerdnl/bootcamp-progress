@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replaceChild</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <p id="old">this is old node</p>
+    </div>
+
+    <script>
+      const wrapper = document.getElementById("wrapper");
+      const oldNode = document.getElementById("old");
+
+      const newNode = document.createElement("p");
+      newNode.innerText = "this is new node";
+      wrapper.replaceChild(newNode, oldNode);
+    </script>
+  </body>
+</html>

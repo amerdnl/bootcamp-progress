@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getEements by class name</title>
+  </head>
+  <body>
+    <p class="item">item 1</p>
+    <p class="item">item 2</p>
+    <button onclick="HighlightItems()">highlight</button>
+
+    <script>
+      function HighlightItems() {
+        const items = document.getElementsByClassName("item");
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.color = "deeppink";
+        }
+      }
+    </script>
+  </body>
+</html>

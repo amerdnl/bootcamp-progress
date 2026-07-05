@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelector / querySelectorAll</title>
+  </head>
+  <body>
+    <p class="desc">first sentence</p>
+    <p class="desc">second sentence</p>
+    <button onclick="updateFirst()">first sentence is hostname</button>
+
+    <script>
+      function updateFirst() {
+        // const items = document.querySelectorAll(".desc");
+        const item = document.querySelector(".desc");
+        console.log(item);
+        // for (let i = 0; i < items.length; i++) {
+        //   items[i].innerHTML = "<b>enter an address here<b>";
+        // }
+        item.innerHTML = "<b>enter an address here<b>";
+      }
+    </script>
+  </body>
+</html>

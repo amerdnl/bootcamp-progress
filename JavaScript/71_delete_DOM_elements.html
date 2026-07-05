@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete DOM elements</title>
+  </head>
+  <body>
+    <h2>delete DOM elements</h2>
+    <p id="notice">cookies are allowed</p>
+    <button onclick="removeText()">remove text</button>
+
+    <script>
+      function removeText() {
+        document.getElementById("notice").remove();
+      }
+    </script>
+  </body>
+</html>

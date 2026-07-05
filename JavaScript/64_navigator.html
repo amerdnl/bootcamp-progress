@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navigator</title>
+  </head>
+  <body>
+    <h2>navigator</h2>
+    <button onclick="showNavigatorInfo()">View Browser Information</button>
+    <script>
+      function showNavigatorInfo() {
+        console.log("Browser Name (userAgent): ", navigator.userAgent);
+        console.log("OS Name (platform): ", navigator.platform);
+        console.log("Language Setting (language): ", navigator.language);
+        console.log("Online (onLine): ", navigator.onLine);
+        console.log(
+          "Cookies Availability (cookieEnabled): ",
+          navigator.cookieEnabled,
+        );
+      }
+    </script>
+  </body>
+</html>

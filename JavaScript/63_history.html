@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>history</title>
+  </head>
+  <body>
+    <h2>history</h2>
+    <button onclick="goBack()">back</button>
+    <button onclick="goForward()">next</button>
+    <button onclick="goSteps(-2)">back 2 steps</button>
+    <button onclick="showHistoryLength()">visit records</button>
+    <script>
+      function goBack() {
+        history.back();
+      }
+
+      function goForward() {
+        history.forward();
+      }
+
+      function goSteps(n) {
+        history.go(n);
+      }
+
+      function showHistoryLength() {
+        alert("number of visit records: " + history.length);
+      }
+    </script>
+  </body>
+</html>
