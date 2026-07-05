@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regular expression</title>
+  </head>
+  <body>
+    <h2>regular expression</h2>
+    <button id="checkBtn">Create and Check</button>
+    <script>
+      document
+        .getElementById("checkBtn")
+        .addEventListener("click", function () {
+          const email = "test@example.com";
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          console.log("email: ", emailRegex.test(email));
+
+          const numberValue = "010-1234-5678";
+          const numberRegex = /^010-\d{4}-\d{4}$/;
+          console.log("Mobile phone: ", numberRegex.test(numberValue));
+
+          const onlynumber = "12345";
+          const onlynumberRegex = /^[0-9]+$/;
+          console.log("only number: ", onlynumberRegex.test(onlynumber));
+        });
+    </script>
+  </body>
+</html>
