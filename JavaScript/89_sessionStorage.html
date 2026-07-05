@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>session storage</title>
+  </head>
+  <body>
+    <h2>the number of visit to this tab: <span id="counter">0</span> visit</h2>
+    <script>
+      let count = sessionStorage.getItem("visitCount");
+      count = count ? Number(count) + 1 : 1;
+
+      sessionStorage.setItem("visitCount", count);
+
+      document.getElementById("counter").innerText = count;
+    </script>
+  </body>
+</html>

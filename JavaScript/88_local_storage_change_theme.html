@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change theme local storage</title>
+  </head>
+  <body>
+    <button onclick="toggleTheme()">Change Theme</button>
+    <p>Change the text theme: <span id="themeText"></span></p>
+
+    <script>
+      const body = document.body;
+
+      function applyTheme(theme) {
+        body.style.backgroundColor = theme === "dark" ? "#222" : "#fff";
+        body.style.color = theme === "dark" ? "#fff" : "#000";
+        document.getElementById("themeText").innerText = theme;
+      }
+
+      function toggleTheme() {
+        const current = localStorage.getItem("theme") || "light";
+        const next = current === "light" ? "dark" : "light";
+        localStorage.setItem("theme", next);
+        applyTheme(next);
+      }
+
+      applyTheme(localStorage.getItem("theme") || "light");
+    </script>
+  </body>
+</html>
