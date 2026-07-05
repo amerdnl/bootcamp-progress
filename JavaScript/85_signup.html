@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <script src="./js/regist.js"></script>
+  </head>
+  <body>
+    <h2>Sign Up Page</h2>
+    <form
+      action="/regist"
+      method="post"
+      name="regform"
+      id="regform"
+      onsubmit="return sendit();"
+    >
+      <p>
+        Enter ID: <input type="text" name="userid" id="userid" maxlength="20" />
+      </p>
+      <p>
+        Enter Password:
+        <input type="password" name="userpw" id="userpw" maxlength="20" />
+      </p>
+      <p>
+        Password Confirmation:
+        <input type="password" name="userpw_re" id="userpw_re" maxlength="20" />
+      </p>
+      <p>Name: <input type="text" name="name" id="name" maxlength="10" /></p>
+      <p>
+        Mobile Phone: <input type="text" name="hp" id="hp" maxlength="20" />
+      </p>
+      <p>
+        Email: <input type="email" name="email" id="email" maxlength="50" />
+      </p>
+      <p>
+        Postal Code:
+        <input
+          type="text"
+          name="zipcode"
+          id="zipcode"
+          maxlength="5"
+          placeholder="postal code"
+        />
+        <button>search</button>
+      </p>
+      <p>
+        Address:
+        <input
+          type="text"
+          name="address1"
+          id="address1"
+          placeholder="address"
+        />
+      </p>
+      <p>
+        Detailed Address:
+        <input
+          type="text"
+          name="address2"
+          id="address2"
+          placeholder="detailed address"
+        />
+      </p>
+      <p>
+        Reference Item:
+        <input
+          type="text"
+          name="address3"
+          id="address3"
+          placeholder="reference item"
+        />
+      </p>
+      <p><button>Register</button></p>
+    </form>
+  </body>
+</html>
