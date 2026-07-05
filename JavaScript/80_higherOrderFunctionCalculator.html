@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>higher order function calculator</title>
+  </head>
+  <body>
+    <script>
+      const calc_add = (a, b) => a + b;
+      const calc_multiply = (a, b) => a * b;
+
+      function calculator(num1, num2, action) {
+        if (num1 < 0 || num2 < 0) return;
+        const result = action(num1, num2);
+        return result;
+      }
+
+      console.log(calculator(10, 3, calc_add));
+      console.log(calculator(10, 3, calc_multiply));
+    </script>
+  </body>
+</html>

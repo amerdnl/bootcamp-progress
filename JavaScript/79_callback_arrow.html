@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback + arrow</title>
+  </head>
+  <body>
+    <script>
+      function doSomething(callback) {
+        console.log("work started");
+        callback();
+      }
+
+      doSomething(() => {
+        console.log("work completed");
+      });
+    </script>
+  </body>
+</html>
