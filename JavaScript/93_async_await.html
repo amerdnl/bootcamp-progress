@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async / await</title>
+  </head>
+  <body>
+    <h2>async / await</h2>
+    <script>
+      function orderCoffee(menu) {
+        console.log(`${menu} order has been received. Please wait a moment...`);
+        const availableMenu = ["Americano", "Latte", "Vanilla Latte"];
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (availableMenu.includes(menu)) {
+              resolve(`Enjoy your ${menu} !!!`);
+            } else {
+              reject(`sorry your order: ${menu} currently not avaialable :(`);
+            }
+          }, 2000);
+        });
+      }
+
+      async function startOrder() {
+        try {
+          const result = await orderCoffee("Ice Lemon Tea");
+          console.log(result);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          console.log("Your order has been completed");
+        }
+      }
+
+      startOrder();
+    </script>
+  </body>
+</html>

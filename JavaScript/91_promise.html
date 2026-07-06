@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <h2>example of a promise request</h2>
+
+    <script>
+      const getData = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const success = false;
+          if (success) {
+            resolve("succesfully recieve data from the resolver server");
+          } else {
+            reject("server request failed!!");
+          }
+        }, 2000);
+      });
+
+      getData
+        .then((result) => {
+          console.log("Success: ", result);
+        })
+        .catch((error) => {
+          console.log("Failed: ", error);
+        })
+        .finally(() => {
+          console.log("Task Completed");
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise method</title>
+  </head>
+  <body>
+    <h2>Promise.all / race / allSettled</h2>
+    <script>
+      function getBanana() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Banana");
+          }, 1000);
+        });
+      }
+
+      function getApple() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Apple");
+          }, 3000);
+        });
+      }
+
+      function getOrange() {
+        return Promise.reject(new Error("There is no Orange"));
+      }
+
+      getBanana().then((banana) =>
+        getApple()
+          .then((apple) => [banana, apple])
+          .then(console.log),
+      );
+
+      Promise.all([getBanana(), getApple()]).then((fruits) =>
+        console.log("all", fruits),
+      );
+
+      Promise.race([getBanana(), getApple()]).then((fruit) =>
+        console.log("race", fruit),
+      );
+    </script>
+  </body>
+</html>
