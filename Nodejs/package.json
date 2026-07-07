@@ -7,8 +7,8 @@
   "type": "commonjs",
   "main": "1_http.js",
   "scripts": {
-    "start": "3_querystring.js",
-    "dev": "nodemon 3_querystring.js",
+    "start": "node 3_querystring.js",
+    "dev": "nodemon 4_json.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
