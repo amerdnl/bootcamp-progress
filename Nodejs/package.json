@@ -8,10 +8,14 @@
   "main": "1_http.js",
   "scripts": {
     "start": "node 3_querystring.js",
-    "dev": "nodemon 4_json.js",
+    "dev": "nodemon 6_restful.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
   }
 }
