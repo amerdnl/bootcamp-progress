@@ -8,7 +8,7 @@
   "main": "1_http.js",
   "scripts": {
     "start": "node 3_querystring.js",
-    "dev": "nodemon 9_file.js",
+    "dev": "nodemon 10_filedb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
