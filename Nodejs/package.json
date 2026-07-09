@@ -8,7 +8,7 @@
   "main": "1_http.js",
   "scripts": {
     "start": "node 3_querystring.js",
-    "dev": "nodemon 10_filedb.js",
+    "dev": "nodemon 11_mongodb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "ejs": "^6.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongodb": "^7.5.0"
   }
 }
